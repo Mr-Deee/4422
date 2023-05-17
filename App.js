@@ -1,26 +1,13 @@
-import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import {NavigationContainer} from '@react-navigation/native';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import HomeScreen from './src/home';
-
-
-
-
-const Stack = createNativeStackNavigator();
+import {Router, Scene} from 'react-native-router-flux';
 
 
 export default function App() {
   return (
-    <NavigationContainer>
-    <Stack.Navigator>
-      <Stack.Screen
-        name="Home"
-        component={HomeScreen}
-        options={{title: 'Welcome'}}
-      />
-    </Stack.Navigator>
-  </NavigationContainer>
+    <Router>
+    <Scene key="home" component={HomeScreen} title="Home" />
+    <Scene key="about" component={AboutScreen} title="About" />
+</Router>
   );
 }
 
