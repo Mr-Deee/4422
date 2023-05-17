@@ -1,13 +1,12 @@
+import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import {Router, Scene} from 'react-native-router-flux';
-
 
 export default function App() {
   return (
-    <Router>
-    <Scene key="home" component={HomeScreen} title="Home" />
-    <Scene key="about" component={AboutScreen} title="About" />
-</Router>
+    <View style={styles.container}>
+      <Text>Open up App.js to start working on your app!</Text>
+      <StatusBar style="auto" />
+    </View>
   );
 }
 
