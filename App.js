@@ -3,7 +3,8 @@ import { View, Text, Button } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 import HomeScreen from './src/home';
-import LogInScreen from './src/login';
+import LoginScreen from './src/login';
+import SignupScreen from './src/signup';
 
 const Stack = createStackNavigator();
 
@@ -11,8 +12,10 @@ const Stack = createStackNavigator();
 const App = () => (
   <NavigationContainer>
     <Stack.Navigator>
-    <Stack.Screen name=" " component={LogInScreen} />
-      <Stack.Screen name=" " component={HomeScreen} />
+    <Stack.Screen name="Login" component={LoginScreen} />
+    <Stack.Screen name="Signup" component={SignupScreen} />
+    <Stack.Screen name="Home" component={HomeScreen} />
+
    
     </Stack.Navigator>
   </NavigationContainer>
