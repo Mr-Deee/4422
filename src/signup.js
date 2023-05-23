@@ -20,9 +20,12 @@ const Signup=({ navigation }) =>{
   const [password, setPassword] = useState("");
 
   return (
-    
-    <KeyboardAvoidingView behavior="padding" style={styles.keyboardcontainer}>
-      <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+    <KeyboardAvoidingView
+    style={styles.container}
+    behavior={Platform.OS === 'ios' ? 'padding' : null}
+    keyboardVerticalOffset={Platform.OS === 'ios' ? 64 : 0}
+  >
+<ScrollView style={styles.scrollcontainer} contentContainerStyle={styles.contentContainer}>
         <View
           style={{ flex: 1, alignItems: "center", justifyContent:"space-evenly" }}
         >
@@ -73,15 +76,21 @@ const Signup=({ navigation }) =>{
           </View>
          
         </View>
-      </TouchableWithoutFeedback>
-    </KeyboardAvoidingView>
+        </ScrollView>
+        </KeyboardAvoidingView>
   
   );
 }
 
 const styles = StyleSheet.create({
-  keyboardcontainer: {
-    flex:1,
+  scrollcontainer: {
+    flexGrow:1,
+  },
+
+  contentContainer: {
+    flexGrow: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   fullnametextinput: {
     borderRadius: 14,
