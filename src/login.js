@@ -28,6 +28,8 @@ const LoginScreen = ({ navigation }) => {
           placeholderTextColor="#003f5c"
           onChangeText={(email) => setEmail(email)}
         ></TextInput>
+
+        
           <TextInput
           style={styles.passwordtextinput}
           placeholder="Password"

@@ -32,23 +32,25 @@ return (
         <View style={styles.content}>
           <TextInput
             style={styles.input}
-            placeholder="Type something..."
+            placeholder="Email"
             multiline
             autoFocus
+            onChangeText={(email) => setEmail(email)}
           />
         </View>
         <View style={styles.content}>
           <TextInput
             style={styles.input}
-            placeholder="Type something..."
-            multiline
-            autoFocus
+            placeholder="Password"
+            secureTextEntry={true}
+            onChangeText={(password) => setPassword(password)}
+           autoFocus
           />
         </View>
         <View style={styles.content}>
           <TextInput
             style={styles.input}
-            placeholder="Type something..."
+            placeholder="Phone"
             multiline
             autoFocus
           />
@@ -105,19 +107,21 @@ paddingBottom:40,
 
   txtlogo: {
    
-        fontSize: 50,
+        fontSize: 80,
       
       },
   content: {
     flex: 1,
-    padding: 16,
+    padding: 20,
     justifyContent: 'center',
   },
   input: {
+    paddingTop:10,
+    borderRadius: 10,
     height: 40,
     borderColor: 'gray',
     borderWidth: 1,
-    paddingHorizontal: 10,
+    paddingHorizontal: 30,
   },
   containerstyle: {
     backgroundColor: "white",
