@@ -51,6 +51,7 @@ return (
           <TextInput
             style={styles.input}
             placeholder="Phone"
+            onChangeText={(phone)=>setphone(phone)}
             multiline
             autoFocus
           />
