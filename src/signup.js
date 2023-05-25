@@ -28,7 +28,15 @@ return (
     
       <View style={styles.containerstyle}>
   
-       
+      <View style={styles.content}>
+          <TextInput
+            style={styles.input}
+            placeholder="Full Name"
+            multiline
+            autoFocus
+            onChangeText={(Name) => setEmail(Name)}
+          />
+        </View>
         <View style={styles.content}>
           <TextInput
             style={styles.input}
