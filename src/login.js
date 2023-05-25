@@ -1,5 +1,7 @@
 import { Input } from "native-base";
-import { Button, View, TouchableOpacity, Text, StyleSheet,  ScrollView,SafeAreaView } from "react-native";
+import { Button, View, TouchableOpacity, Text, StyleSheet,  ScrollView,  SafeAreaView,
+  TouchableWithoutFeedback,
+  KeyboardAvoidingView } from "react-native";
 import { TextInput } from "react-native-gesture-handler";
 import React, { useState } from "react";
 
@@ -9,11 +11,10 @@ const LoginScreen = ({ navigation }) => {
   const [password, setPassword] = useState("");
 
   return (
-    <SafeAreaView style={{ flex: 1 }}>
+     <ScrollView>
 
-    <ScrollView
-              keyboardShouldPersistTaps="always"
-              contentContainerStyle={styles.container}>
+    <KeyboardAvoidingView style={styles.container} behavior="padding" keyboardVerticalOffset={64}>
+     
 
     <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
 
@@ -43,7 +44,7 @@ const LoginScreen = ({ navigation }) => {
         
         onPress={() => navigation.navigate("Signup")}
       >
-        <Text style={styles.doyoutextStyle}>Do you hae an Account</Text>
+        <Text style={styles.doyoutextStyle}>Do you have an Account? Register.</Text>
       </TouchableOpacity>
 
 
@@ -62,8 +63,8 @@ const LoginScreen = ({ navigation }) => {
 
 
     </View>
-    </ScrollView>
-    </SafeAreaView>
+    
+    </KeyboardAvoidingView></ScrollView>
   );
 };
 
@@ -71,7 +72,7 @@ const styles = StyleSheet.create({
 
   doyoutextStyle:{
     top:130,
-    left:148,
+    left: 70,
     color:"black"
 
   },

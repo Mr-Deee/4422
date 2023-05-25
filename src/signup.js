@@ -58,24 +58,10 @@ return (
         </View>
    
       
-        <View style={styles.content}>
-          <TextInput
-            style={styles.input}
-            placeholder="Type something..."
-            multiline
-            autoFocus
-          />
+
           
-        </View>
-         <View style={styles.content}>
-          <TextInput
-            style={styles.input}
-            placeholder="Type something..."
-            multiline
-            autoFocus
-          />
-          
-        </View>
+   
+        
      
         <TouchableOpacity
             style={styles.button}
@@ -112,7 +98,7 @@ paddingBottom:40,
       },
   content: {
     flex: 1,
-    padding: 20,
+    padding: 40,
     justifyContent: 'center',
   },
   input: {
@@ -134,16 +120,17 @@ paddingBottom:40,
 
 
     button: {
+ 
     width:300,
     left:20,
 
     alignItems: "center",
     justifyContent: "center",
-    paddingVertical: 12,
+    paddingVertical: 19,
     paddingHorizontal: 32,
     borderRadius: 10,
     elevation: 3,
-    backgroundColor: "black",
+    backgroundColor: "white",
   },
 });
 
