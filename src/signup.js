@@ -121,7 +121,7 @@ paddingBottom:40,
   containerstyle: {
     backgroundColor: "white",
     borderRadius: 30,
-    borderColor: "back",
+    borderColor: "black",
     marginLeft:30,
     marginRight:30,
     borderWidth: 1,

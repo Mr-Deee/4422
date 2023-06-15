@@ -11,15 +11,15 @@ const LoginScreen = ({ navigation }) => {
   const [password, setPassword] = useState("");
 
   return (
-     <ScrollView>
-
-    <KeyboardAvoidingView style={styles.container} behavior="padding" keyboardVerticalOffset={64}>
      
 
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+    <KeyboardAvoidingView style={styles.container} behavior="padding" keyboardVerticalOffset={64}>
+     <ScrollView>
 
+  
 
-      <Text style={styles.txtlogo}>D|N</Text>
+    <View style={styles.logoview}><Text style={styles.txtlogo}>D|N</Text></View>
+    <View style={styles.content}>
       <Text>LogIn Screen</Text>
 
       <View style={styles.containerstyle}>
@@ -61,14 +61,22 @@ const LoginScreen = ({ navigation }) => {
    
 
 
+</View>
 
-    </View>
-    
-    </KeyboardAvoidingView></ScrollView>
+    </ScrollView>
+    </KeyboardAvoidingView>
   );
 };
 
 const styles = StyleSheet.create({
+
+logoview:{
+    justifyContent: 'center',
+    alignItems: 'center',
+    flex:1,
+paddingTop: 49,
+paddingBottom:40,
+  },
 
   doyoutextStyle:{
     top:130,
@@ -82,29 +90,27 @@ backgroundColor:"transparent",
 
 
   },
-  emailtextinput: {
-    borderRadius: 14,
-    borderWidth: 1,
-    borderColor:"black",
-    top: 90,
-    width: 250,
-    left: 50,
-    paddingTop: 10,
-    paddingLeft: 10,
 
-    paddingBottom: 10,
+  content: {
+    flex: 1,
+    padding: 40,
+    justifyContent: 'center',
+  },
+  emailtextinput: {
+    paddingTop:10,
+    borderRadius: 10,
+    height: 40,
+    borderColor: 'gray',
+    borderWidth: 1,
+    paddingHorizontal: 30,
   },
  passwordtextinput: {
-    borderRadius: 14,
-    borderWidth: 1,
-    borderColor:"black",
-    top:100,
-    width: 250,
-    left: 50,
-    paddingTop: 10,
-    paddingLeft: 10,
-
-    paddingBottom: 10,
+  paddingTop:10,
+  borderRadius: 10,
+  height: 40,
+  borderColor: 'gray',
+  borderWidth: 1,
+  paddingHorizontal: 30,
   },
 
 
@@ -135,13 +141,11 @@ backgroundColor:"transparent",
 
   containerstyle: {
     top: 30,
-
-    paddingBottom: 40,
-    height: 350,
-    width: 350,
+    marginLeft:30,
+   marginRight:30,
     backgroundColor: "white",
     borderRadius: 30,
-    borderColor: "back",
+    borderColor: "black",
     borderWidth: 1,
   },
 });
