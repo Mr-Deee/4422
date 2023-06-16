@@ -4,15 +4,9 @@ import { SvgUri } from 'react-native-svg';
 const Github = () => {
   
 
-  return (
-    <View style={{ flex: 1 }}>
-      <SvgUri
-        // uri={'https://api.github.com/users/Mr-Deee'} // Replace 'your-username' with your actual GitHub username
-        width="100%"
-        height="100%"
-      />
-    </View>
-  );
+  // return (
+  
+  // );
 };
 
 export default Github;
