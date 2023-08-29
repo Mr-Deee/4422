@@ -1,5 +1,6 @@
 import * as React from "react";
 import Github from "./components/Github";
+import GitHubCalendar from 'react-github-calendar';
 import {
   TouchableOpacity,
   StyleSheet,
@@ -40,15 +41,19 @@ function HomeScreen({ navigation }) {
               <Text style={styles.buttonText}>{">"}</Text>
             </TouchableOpacity>
           </View>
+      
+
 
           <View style={styles.projectscard02}></View>
         </View>
 
         <View style={styles.projectscard02}></View>
 
-        <View style={styles.subsection}>     
-          <View style={{ flex: 1 }}> 
-          <Github /></View> 
+        <View style={styles.subsection}>    
+          <View> 
+      </View> 
+
+  
           </View>
       </ScrollView>
     </View>
